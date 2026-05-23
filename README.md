@@ -1,16 +1,81 @@
-# React + Vite
+---
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📂 Project Structure
 
-Currently, two official plugins are available:
+```bash
+mediquery-frontend/
+│
+├── src/
+│   ├── components/        # Reusable UI components
+│   │   └── upload/
+│   │       └── UploadBox.jsx
+│   ├── features/
+│   │   └── chat/
+│   │       └── chatSlice.js
+│   ├── services/
+│   │   └── api.js         # RTK Query API service
+│   ├── pages/             # Route-level pages
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── public/
+├── .env.example
+├── package.json
+└── vite.config.js
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Clone the repo
+```bash
+git clone https://github.com/ravinder-raj/mediquery-frontend.git
+cd mediquery-frontend
+```
 
-## Expanding the ESLint configuration
+### 2. Install dependencies
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. Configure environment
+```bash
+cp .env.example .env
+```
+
+Add your backend URL to `.env`:
+```env
+VITE_API_URL=https://mediquery-z0wd.onrender.com
+```
+
+### 4. Run the dev server
+```bash
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 🌍 Deployment
+
+Frontend is deployed on **Netlify**.
+Backend is deployed on **Render**.
+
+> ⚠️ The backend runs on Render's free tier — it may take **20-30 seconds** to wake up on first request.
+
+---
+
+## 🔗 Environment Variables
+
+| Variable | Description |
+|---|---|
+| `VITE_API_URL` | Backend API base URL |
+
+---
+
+## 👨‍💻 Author
+
+Built as part of a 30-day AI Engineering learning journey.
+Demonstrates full-stack RAG architecture with a production-grade frontend.
